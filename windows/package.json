@@ -1,0 +1,30 @@
+{
+ "name": "bedwars-hub",
+ "version": "1.0.0",
+ "description": "BedWars Hub desktop app",
+ "main": "main.js",
+ "scripts": {
+  "start": "electron .",
+  "dist": "electron-builder --win"
+ },
+ "devDependencies": {
+  "electron": "^31.0.0",
+  "electron-builder": "^24.13.3"
+ },
+ "build": {
+  "appId": "com.bedwarshub.app",
+  "productName": "BedWars Hub",
+  "files": [
+   "main.js",
+   "build/**"
+  ],
+  "win": {
+   "target": "nsis",
+   "icon": "build/icon.ico"
+  },
+  "nsis": {
+   "oneClick": false,
+   "allowToChangeInstallationDirectory": true
+  }
+ }
+}
